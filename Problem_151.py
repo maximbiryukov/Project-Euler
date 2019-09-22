@@ -1,6 +1,3 @@
-import warnings
-warnings.filterwarnings("ignore")
-
 import random
 import numpy as np
 
@@ -30,10 +27,3 @@ def job():
                 table += [int(table.pop()/2)]*2
 
     return counter - 1
-
-for i in range(1000000):
-    if i % 10000 == 0:
-        print(i, np.mean(result))
-    result.append(job())
-    
-print(np.mean(result))
