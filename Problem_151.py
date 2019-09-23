@@ -1,19 +1,14 @@
 def table(sheet):
-    
     table = []
-    
     if sheet != 1:
         while 1 not in table:
             sheet /= 2
-            table.append(sheet)
-            
+            table.append(sheet)  
     return table
 
 
-def batch(envelope, options = {():0}):
-              
+def batch(envelope, options = {():0}):          
     output = 0
-    
     envelope = tuple(envelope)
     
     if envelope and envelope not in options:
@@ -34,7 +29,7 @@ def batch(envelope, options = {():0}):
             output += 1
             
         options[envelope] = output
-        
+        print(options)
         
         
     return options[envelope]
